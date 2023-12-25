@@ -13,6 +13,7 @@ This tool uses LAN (Local Area Network) for communication.
 3. Select the "Allow access" button when the "Windows Security Alert" window appears.
 4. Run "client_client.exe" on each client PC
 5. Input the IP address of the server PC to the client PC.
+6. To turn sync on/off, press Ctrl-F1 on the server PC.
 
 ## Install for other OS
 1. Download python3.10 from https://www.python.org/
@@ -23,6 +24,7 @@ This tool uses LAN (Local Area Network) for communication.
 6. Open port 65432/tcp on server PC
 7. Run "sync-client.py" on each client PC
 8. Input the IP address of the server PC to the each client PC.
+9. To turn sync on/off, press Ctrl-F1 on the server PC.
 
 ## Troubleshooting
 * Server and client cannot communicate. In that case, please check the firewall settings on the server PC. For example, on Windows 10, open "Windows Defender Firewall" -> "Allow an app or feature through Windows Defender Firewall" and allow "sync-server.exe".
