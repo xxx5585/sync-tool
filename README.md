@@ -4,8 +4,14 @@ This tool synchronizes keyboards and mouses on multiple PCs.
 For example, you can move multiple characters at the same time in multiple game accounts.
 This tool uses LAN (Local Area Network) for communication.
 
-## Introduction video for Windows 64bit
+There were not any sync tools for keyboards and mouse for Windows PC. So I created this tool for Windows and other OS. This tool can be downloaded from my github.
 
+However, some Android emulators have sync tools.
+* Bluestacks - Multi-Instance Sync: https://www.bluestacks.com/features/multi-instance-sync.html
+* LDPlayer - Synchronizer Tool: https://www.ldplayer.net/blog/introduction-to-synchronizer.html
+
+## Introduction video for Windows 64bit
+https://youtu.be/ZoZgP2ll-s0
 
 ## Install for Windows 64bit
 1. Download the two exe files (sync-server.exe, sync-client.exe) from this github to each PC.
