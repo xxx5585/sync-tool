@@ -4,7 +4,7 @@
 
 # auther: xxx
 # created: June 9, 2023
-# changed: Dec 25, 2023
+# changed: Dec 26, 2023
 
 
 
@@ -123,7 +123,6 @@ def client(host):
 def main():
 
   args = sys.argv
-
 
   client_hostname = socket.gethostname()
   client_addr = socket.gethostbyname(client_hostname)

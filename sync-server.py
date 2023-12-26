@@ -1,10 +1,11 @@
 # sync tool for server
 # 1. pip install pynput
 # 2. run this script
+# 3. toggle syncing on or off, press Ctrl-F2
 
 # auther: xxx
 # created: June 9, 2023
-# changed: Dec 25, 2023
+# changed: Dec 26, 2023
 
 
 
@@ -69,16 +70,6 @@ def on_press(key):
 
   message = 'key\tpress\t{0}\n'.format(key_code)
 
-  '''
-  if 'char' in dir(key):
-    message = 'key\tpress\t{0}'.format(key.char)
-    #if key.char == 'a':
-    #  print('you pressed a')
-
-  else:
-    message = 'key\tpress\t{0}'.format(key)
-  '''
-
   send_message(message)
 
 
@@ -93,7 +84,7 @@ def on_release(key):
   if key == keyboard.Key.ctrl_l:
     ctrl_flg = False
 
-  if key == keyboard.Key.f1 and ctrl_flg:
+  if key == keyboard.Key.f2 and ctrl_flg:
     if sync_flg:
       message_release_ctrl = 'key\trelease\t{0}\n'.format(keyboard.Key.ctrl_l.value.vk)
 
@@ -102,12 +93,6 @@ def on_release(key):
 
   elif not sync_flg:
     return
-
-
-  ## 112 is F1 key
-  #if key_code == 112:
-  #  sync_flg = not sync_flg
-  #  print('sync:', 'On' if sync_flg else 'Off')
 
 
   try:
@@ -119,18 +104,6 @@ def on_release(key):
 
   message = 'key\trelease\t{0}\n'.format(key_code)
   message += message_release_ctrl
-
-  '''
-  if 'char' in dir(key):
-    message = 'key\trelease\t{0}'.format(key.char)
-    #if key.char == 'a':
-    #  print('you released a')
-  else:
-    message = 'key\trelease\t{0}'.format(key)
-    if key == keyboard.Key.esc:
-      # Stop listener
-      return False
-  '''
 
   send_message(message)
 
@@ -188,7 +161,7 @@ def main():
     with lock:
       client_sockets.append((client_socket, addr))
 
-  server_socket.close()
+  #server_socket.close()
 
 if __name__ == '__main__':
   main()
